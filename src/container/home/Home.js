@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 
-import HomeContainer from 'container/home/Home';
-
 class Home extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
 
     render() {
-        return (
-            <HomeContainer />
+        return(
+            <div>
+                Home is on fire
+            </div>
         );
     }
 }
