@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 
+import {Home} from 'views';
+
 class App extends Component {
     render() {
         return (
             <div>
-                I'm on fire
+                <Home />
             </div>
         );
     }

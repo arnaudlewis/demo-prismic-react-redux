@@ -1,3 +1,5 @@
-/**
- * Created by yves.schleich on 23/12/16.
- */
+import Home from './home/Home';
+
+export {
+    Home
+};

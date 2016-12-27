@@ -1,3 +1,6 @@
-/**
- * Created by yves.schleich on 23/12/16.
- */
+import HomeContainer from './home';
+
+export {
+    HomeContainer
+};
+
