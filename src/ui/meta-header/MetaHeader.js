@@ -1,18 +1,28 @@
 import React, {Component} from 'react';
 
-import './meta-header.scss';
-import FontAwesome from 'react-fontawesome';
-
 export const MetaHeader = () => {
-  return (
-      <div className="row meta-header">
-          <div className="col-xs-2">
-              <span><FontAwesome name="phone"/></span>
-              <span>06181/29493</span>
-          </div>
-          <div className="col-xs-2">
-              <span>E-Mail</span>
-          </div>
-      </div>
-  );
+    const style = {
+        'padding': '10px',
+
+        'fontFamily': 'Roboto-Light',
+        'color': '#bbbbbb',
+
+        'backgroundColor': '#fbfbfb',
+        'borderBottom': '1px solid #e8e8e8'
+    };
+
+    return (
+        <div className="meta-header" style={style}>
+            <div className="container">
+                <div className="row center-xs start-sm">
+                    <div className="col-xs-12 col-sm-2">
+                        <span>06181/29493-0</span>
+                    </div>
+                    <div className="col-xs-12 col-sm-2">
+                        <a href="placeholder@email.de"><span>placeholder@email.de</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 };
