@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import {MetaHeader} from 'ui';
+
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -7,8 +9,8 @@ class Home extends Component {
 
     render() {
         return(
-            <div>
-                Home is on fire
+            <div className="view--home">
+                <MetaHeader />
             </div>
         );
     }
