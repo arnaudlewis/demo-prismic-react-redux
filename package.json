@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/yves-s/zoeller-steuerberatung#readme",
   "dependencies": {
+    "flexboxgrid": "^6.3.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
