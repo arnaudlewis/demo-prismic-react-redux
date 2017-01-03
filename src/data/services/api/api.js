@@ -9,9 +9,17 @@ const apiService = store => next => action => {
     switch(action.type) {
         case api.GET:
             Prismic.api(prismicConfig.apiEndpoint).then(function(api) {
-                return api.query("");
+                return api.query(Prismic.Predicates.at("document.type", action.path));
             }).then(function(response) {
-                console.log("Documents: ", response.results);
+                if(
+                    response &&
+                    response.results
+                ) {
+                    next({
+                        type: 'home/GET_HOME_SUCCESS',
+                        response: response.results
+                    });
+                }
             }, function(err) {
                 console.log("Something went wrong: ", err);
             });
