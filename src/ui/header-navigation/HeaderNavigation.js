@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 export const HeaderNavigation = () => {
     const styles = {
@@ -25,9 +26,9 @@ export const HeaderNavigation = () => {
                     </div>
                     <div className="main-menu col-xs-2 col-sm-8 end-xs">
                         <ul>
-                            <li style={styles.mainMenuLi}><a href="/">Home</a></li>
-                            <li style={styles.mainMenuLi}><a href="/">Kompetenzen</a></li>
-                            <li style={styles.mainMenuLi}><a href="/">Kontakt</a></li>
+                            <li style={styles.mainMenuLi}><Link to="/">Home</Link></li>
+                            <li style={styles.mainMenuLi}><Link to="/">Kompetenzen</Link></li>
+                            <li style={styles.mainMenuLi}><Link to="/">Kontakt</Link></li>
                         </ul>
                     </div>
                 </div>
