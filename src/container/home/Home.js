@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {MetaHeader} from 'ui';
+import {MetaHeader, HeaderNavigation} from 'ui';
 
 class Home extends Component {
     constructor(props) {
@@ -11,6 +11,7 @@ class Home extends Component {
         return(
             <div className="view--home">
                 <MetaHeader />
+                <HeaderNavigation />
             </div>
         );
     }
