@@ -1,18 +1,20 @@
 import React from 'react';
 
 export const MetaHeader = () => {
-    const style = {
-        'padding': '10px',
+    const styles = {
+        metaHeader: {
+            padding: 10,
 
-        'fontFamily': 'Roboto-Light',
-        'color': '#bbbbbb',
+            color: '#bbbbbb',
+            fontSize: 12,
 
-        'backgroundColor': '#fbfbfb',
-        'borderBottom': '1px solid #e8e8e8'
+            backgroundColor: '#fbfbfb',
+            borderBottom: '1px solid #e8e8e8'
+        }
     };
 
     return (
-        <div className="meta-header" style={style}>
+        <div className="meta-header" style={styles.metaHeader}>
             <div className="container">
                 <div className="row center-xs start-sm">
                     <div className="col-xs-12 col-sm-2">
