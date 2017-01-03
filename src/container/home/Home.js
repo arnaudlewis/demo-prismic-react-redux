@@ -10,8 +10,7 @@ class Home extends Component {
     render() {
         return(
             <div className="view--home">
-                <MetaHeader />
-                <HeaderNavigation />
+                Home Component
             </div>
         );
     }
