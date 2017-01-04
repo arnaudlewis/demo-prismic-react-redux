@@ -55,3 +55,15 @@ html, body {
   font-family: 'Raleway', sans-serif;
   //font-family: 'Playfair Display', serif;
 }
+
+p {
+  margin: 0 0 20px;
+
+  line-height: 24px;
+}
+
+.column-text {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

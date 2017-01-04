@@ -8,7 +8,7 @@ const apiService = store => next => action => {
     console.log('INITIAL ACTION', action);
     switch(action.type) {
         case api.GET:
-            Prismic.api(prismicConfig.apiEndpoint).then(function(api) {
+            Prismic.api(prismicConfig.apiEndpoint, prismicConfig.accessToken).then(function(api) {
                 return api.query(Prismic.Predicates.at("document.type", action.path));
             }).then(function(response) {
                 if(

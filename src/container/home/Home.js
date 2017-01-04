@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {MetaHeader, HeaderNavigation} from 'ui';
+import './home.scss';
+
 import {api} from 'data/services';
 
 class Home extends Component {
@@ -11,9 +12,35 @@ class Home extends Component {
     }
 
     render() {
+        console.log('HOME DATA', this.props.homeData);
+        if(
+            !this.props.homeData ||
+            (
+                this.props.homeData &&
+                !this.props.homeData.data
+            )
+        ) {return null;}
+
         return(
             <div className="view--home">
-                Home Component
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xs-12">
+                            <div className="column-text">
+                                {this.props.homeData.data['home.description'].value.map((item, index) => {
+                                    return (
+                                        <p key={index}>{item.text}</p>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-xs-12 ">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
@@ -21,7 +48,7 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        homeData: state.home.response
+        homeData: state.home
     };
 };
 

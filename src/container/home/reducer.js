@@ -1,10 +1,14 @@
 import * as home from './actionTypes';
 
-export default (state = [], action) => {
+export default (state = {}, action) => {
     switch (action.type) {
         case home.GET_HOME_SUCCESS:
             console.log('STATE', state, 'ACTION', action);
-            return Object.assign({}, state, action);
+            return Object.assign(
+                {},
+                state,
+                action.response[0]
+            );
         default:
             return state;
     }
