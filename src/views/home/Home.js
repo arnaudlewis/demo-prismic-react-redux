@@ -1,17 +1,34 @@
-import React, {Component} from 'react';
+import React, {PropTypes} from 'react';
 
-import HomeContainer from 'container/home/Home';
+fetchHomeData
+const Home = ({ homeData, fetchHomeData }) => {
+  console.log(fetchHomeData)
+  return (
+     <div className="view--home">
+        <div className="container">
+            <div className="row">
+                <div className="col-xs-12">
+                    <div className="column-text">
+                        {homeData.data['home.description'].value.map((item, index) => {
+                            return (
+                                <p key={index}>{item.text}</p>
+                            );
+                        })}
+                    </div>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-xs-12 ">
 
-class Home extends Component {
-    constructor(props){
-        super(props);
-    }
-
-    render() {
-        return (
-            <HomeContainer />
-        );
-    }
+                </div>
+            </div>
+        </div>
+    </div>
+  )
 }
 
-export default Home;
+Home.propTypes = {
+  homeData: PropTypes.object.isRequired,
+}
+
+export default Home

@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 
 import {MetaHeader, HeaderNavigation} from 'ui';
+import Prismic from '../prismic/Prismic';
 
 class Main extends Component {
     render() {
         return(
-            <div>
+          <Prismic content={this.props.children}>
                 <MetaHeader />
                 <HeaderNavigation />
-                {this.props.children}
-            </div>
+            </Prismic>
         );
     }
 }

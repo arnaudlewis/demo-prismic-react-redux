@@ -7,7 +7,7 @@ export default (state = {}, action) => {
             return Object.assign(
                 {},
                 state,
-                action.response[0]
+                action.response
             );
         default:
             return state;
